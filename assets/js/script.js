@@ -1,5 +1,16 @@
 let navbar = document.querySelector('.header .navbar');
 let menuBtn = document.querySelector('#menu-btn');
+let scrollTop = document.querySelector('.scroll-top'); 
+
+window.onscroll = () =>{
+
+   if(window.scrollY > 250){
+       scrollTop.style.display = 'initial';
+   }else{
+       scrollTop.style.display = 'none';
+   }
+
+}
 
 menuBtn.onclick = () =>{
    menuBtn.classList.toggle('fa-times');
